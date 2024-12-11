@@ -1,0 +1,21 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel serve ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "parcel": "^2.13.2",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
