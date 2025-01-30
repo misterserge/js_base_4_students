@@ -15,5 +15,8 @@ http.createServer(function (req, res) {
         });
     }else if (req.url === '/now') {
         res.end(new Date.now().toString());
+    }else{
+        res.statusCode = 404;
+        res.end('Not Found');
     }
 }).listen(3000);
