@@ -22,6 +22,25 @@ const getComments = async() => {
     return await response.json();
 }
 
+const getComments = async() => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/comments');
+        return await response.json();
+    } catch (error) {
+        console.warn(error);
+        return error;
+    }
+}
+
+const getComments = async() => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/comments')
+    .catch(error => {
+        console.warn(error);
+        return error;
+    });
+    return await response.json();
+}
+
 // Promise.all([
 //     getPosts(),
 //     getUsers(),
