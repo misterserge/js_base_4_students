@@ -54,7 +54,7 @@ const getComments = async() => {
 //     getComments()
 // ]).then(console.log)
 
-//только первый ответ
+//только первый fulfilled/resolved ответ
 // Promise.race([
 //     getPosts(),
 //     getUsers(),
