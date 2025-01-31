@@ -16,6 +16,12 @@ async function getComments() {
     return await response.json();
 }
 
+const getComments = async() => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/comments');
+
+    return await response.json();
+}
+
 // Promise.all([
 //     getPosts(),
 //     getUsers(),
