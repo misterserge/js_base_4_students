@@ -61,12 +61,17 @@ const getComments = async() => {
 //     getComments()
 // ]).then(console.log)
 
-//только первый reject
-// Promise.reject([
-//     getPosts(),
-//     getUsers(),
-//     getComments()
-// ]).then(console.log)
+//только reject
+    // return Promise.reject('server error!');
+
+//только response
+    // return Promise.response([
+    //     {
+    //         id: 1, 
+    //         src: 'https://jsonplaceholder.typicode.com/images/1.jpg', 
+    //         alt: 'image',
+    //     },
+    // ]);
 
 async function getImages(){
     // const response = await fetch('https://jsonplaceholder.typicode.com/images');
