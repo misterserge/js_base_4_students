@@ -17,3 +17,4 @@ function pow(x, y) {
 
     return x * pow(x, y - 1);
 }
+Math.pow(5, 3);
