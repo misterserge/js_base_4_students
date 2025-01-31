@@ -33,6 +33,10 @@ function copyArrAndDoSomething(arr, instructions) {
     }
     return output;
 }
+//shorter
+function copyArrAndDoSomethingMap(arr, instructions) {
+    return arr.map( (el) => instructions(el) );
+}
 
 copyArrAndDoSomething(arr, munSquared);
 copyArrAndDoSomething(arr, divideOn2);
