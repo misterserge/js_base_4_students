@@ -61,6 +61,13 @@ const getComments = async() => {
 //     getComments()
 // ]).then(console.log)
 
+//только первый reject
+// Promise.reject([
+//     getPosts(),
+//     getUsers(),
+//     getComments()
+// ]).then(console.log)
+
 async function getImages(){
     // const response = await fetch('https://jsonplaceholder.typicode.com/images');
 
