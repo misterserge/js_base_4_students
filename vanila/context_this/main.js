@@ -3,7 +3,7 @@ function log(){
         console.log(this)
     }, 200);
     const that = this
-    setTimeout(() => {
+    setTimeout(function() {
         console.log(that)
     }, 200);
 } 
