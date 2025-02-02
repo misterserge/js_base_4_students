@@ -1,12 +1,11 @@
 import './App.css';
-import persons from './data/persons'
+import persons from './data/persons';
+import Persons from './components/Persons';
 
 function App() {
   return (
     <div className="App">
-      {persons.map((person)=>{
-        return <div key={person.id}>{person.firstName}</div>
-      })}
+      <Persons persons={persons} />
     </div>
   );
 }
