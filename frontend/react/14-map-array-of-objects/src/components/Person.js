@@ -1,6 +1,6 @@
 export default function Person({ firstName, lastName, email, img }) {
   return (
-    <div>
+    <div className="card">
       <img src={img} alt="" />
       <h3>
         {firstName} {lastName}
