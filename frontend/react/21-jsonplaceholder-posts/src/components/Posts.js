@@ -7,8 +7,10 @@ export default function Posts() {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
+  const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
+
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch(POSTS_URL)
       .then((response) => response.json())
       // .then((json) => setData({ ...data, posts: json }))
       .then((json) => setPosts(json))
