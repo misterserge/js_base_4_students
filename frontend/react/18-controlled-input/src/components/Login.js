@@ -15,6 +15,9 @@ export default function Login() {
     console.log(data);
     alert(JSON.stringify(data));
   };
+  const handleInputChange = (e, name) => {
+    setData({...data, [name]: e.target.value})
+  }
   return (
     <>
       <h1>Login form</h1>
@@ -23,7 +26,7 @@ export default function Login() {
           Username
           <input
             type="text"
-            onChange={(e) => setData({...data, username: e.target.value})}
+            onChange={(e) => handleInputChange(e, 'username')}
             value={data.username}
           />
         </label>
@@ -31,7 +34,7 @@ export default function Login() {
           Password
           <input
             type="password"
-            onChange={(e) => setData({...data, password: e.target.value})}
+            onChange={(e) => handleInputChange(e, 'password')}
             value={data.password}
           />
         </label>
