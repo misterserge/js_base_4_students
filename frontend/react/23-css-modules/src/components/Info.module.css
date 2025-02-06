@@ -1,0 +1,16 @@
+.info {
+  border: 2px solid grey;
+  border-radius: 10px;
+  background-color: aqua;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 40%;
+}
+
+.myOtherButton {
+  background-color: coral;
+}
+
+h2 {
+  color: blue;
+}
