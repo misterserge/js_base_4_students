@@ -7,7 +7,14 @@ const TodoList = ({ todoList, deleteTodoItem, toggleTodoHandler }) => {
       {!todoList.length && <h2>Todo list is empty</h2>}
       {todoList.map(
         (todoItem) =>
-          todoList.length > 0 && <TodoItem key={todoItem.id} todoItem={todoItem} toggleTodoHandler={toggleTodoHandler} deleteTodoItem={deleteTodoItem} />
+          todoList.length > 0 && (
+            <TodoItem
+              key={todoItem.id}
+              todoItem={todoItem}
+              toggleTodoHandler={toggleTodoHandler}
+              deleteTodoItem={deleteTodoItem}
+            />
+          )
       )}
     </div>
   );
