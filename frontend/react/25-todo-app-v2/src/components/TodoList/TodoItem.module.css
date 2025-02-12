@@ -27,9 +27,9 @@
   color: gray;
 }
 
-.todo.completedTodo .todoIcon,
-.todo.completedTodo .checkIcon,
-.todo.completedTodo .deleteIcon {
+.todoItem.completedTodo .todoIcon,
+.todoItem.completedTodo .checkIcon,
+.todoItem.completedTodo .deleteIcon {
   color: gray;
 }
 
