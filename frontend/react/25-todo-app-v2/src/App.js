@@ -11,17 +11,26 @@ function App() {
       text,
       isCompleted: false,
       id: uuIdv4(),
-    }
-    setTodoList([...todoList, newTodoItem])
-  }
+    };
+    setTodoList([...todoList, newTodoItem]);
+  };
   const deleteTodoItemHandler = (id) => {
-    setTodoList(todoList.filter((todoItem) => todoItem.id !== id))
-  }
+    setTodoList(todoList.filter((todoItem) => todoItem.id !== id));
+  };
+  const toggleTodoHandler = (id) => {
+    setTodoList(
+      todoList.map((todoItem) =>
+        todoItem.id === id
+          ? { ...todoItem, isCompleted: !todoItem.isCompleted }
+          : { ...todoItem }
+      )
+    );
+  };
   return (
     <div className="App">
       <h1>Todo app</h1>
       <TodoForm addTodoItem={addTodoItemHandler} />
-      <TodoList todoList={todoList} deleteTodoItem={deleteTodoItemHandler} />
+      <TodoList todoList={todoList} deleteTodoItem={deleteTodoItemHandler} toggleTodoHandler={toggleTodoHandler} />
     </div>
   );
 }
