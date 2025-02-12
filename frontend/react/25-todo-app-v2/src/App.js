@@ -8,7 +8,7 @@ function App() {
   const [todoList, setTodoList] = useState([]);
   const addTodoItemHandler = (text) => {
     const newTodoItem = {
-      text: text,
+      text,
       isCompleted: false,
       id: uuidv4(),
     }

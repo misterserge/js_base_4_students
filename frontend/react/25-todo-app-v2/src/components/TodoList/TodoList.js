@@ -6,8 +6,8 @@ const TodoList = ({ todoList, deleteTodoItem }) => {
     <div className={styles.todoListContainer}>
       {!todoList.length && <h2>Todo list is empty</h2>}
       {todoList.map(
-        (todoItem, index) =>
-          todoList.length > 0 && <TodoItem key={index} index={index} todoItem={todoItem} deleteTodoItem={deleteTodoItem} />
+        (todoItem) =>
+          todoList.length > 0 && <TodoItem key={todoItem.id} todoItem={todoItem} deleteTodoItem={deleteTodoItem} />
       )}
     </div>
   );
