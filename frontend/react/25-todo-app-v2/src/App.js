@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuIdv4 } from 'uuid';
 import TodoForm from './components/TodoList/TodoForm';
 import TodoList from './components/TodoList/TodoList';
 import './App.css';
@@ -10,7 +10,7 @@ function App() {
     const newTodoItem = {
       text,
       isCompleted: false,
-      id: uuidv4(),
+      id: uuIdv4(),
     }
     setTodoList([...todoList, newTodoItem])
   }
