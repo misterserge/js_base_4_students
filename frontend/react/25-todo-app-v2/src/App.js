@@ -27,11 +27,20 @@ function App() {
       )
     );
   };
+  const deleteCompletedTodosHandler = () => {
+    setTodoList(todoList.filter((todoItem) => !todoItem.isCompleted));
+  };
+  const resetTodosHandler = () => {
+    setTodoList([]);
+  };
   return (
     <div className="App">
       <h1>Todo app</h1>
       <TodoForm addTodoItem={addTodoItemHandler} />
-      <TodoActions />
+      <TodoActions
+        resetTodosMethods={resetTodosHandler}
+        resetCompletedTodos={deleteCompletedTodosHandler}
+      />
       <TodoList
         todoList={todoList}
         deleteTodoItem={deleteTodoItemHandler}

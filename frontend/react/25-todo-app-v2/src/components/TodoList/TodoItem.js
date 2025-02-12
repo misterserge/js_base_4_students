@@ -7,7 +7,6 @@ export default function TodoItem({
   deleteTodoItem,
   toggleTodoHandler,
 }) {
-  console.log(todoItem);
   return (
     <div
       className={`${styles.todoItem} ${
@@ -20,7 +19,10 @@ export default function TodoItem({
         className={styles.deleteIcon}
         onClick={() => deleteTodoItem(todoItem.id)}
       />
-      <FaCheck className={styles.checkIcon} onClick={() => toggleTodoHandler(todoItem.id)} />
+      <FaCheck
+        className={styles.checkIcon}
+        onClick={() => toggleTodoHandler(todoItem.id)}
+      />
     </div>
   );
 }
