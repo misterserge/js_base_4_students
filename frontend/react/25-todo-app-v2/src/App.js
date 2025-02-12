@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { v4 as uuIdv4 } from 'uuid';
 import TodoForm from './components/TodoList/TodoForm';
 import TodoList from './components/TodoList/TodoList';
+import TodoActions from './components/TodoList/TodoActions';
 import './App.css';
 
 function App() {
@@ -30,7 +31,12 @@ function App() {
     <div className="App">
       <h1>Todo app</h1>
       <TodoForm addTodoItem={addTodoItemHandler} />
-      <TodoList todoList={todoList} deleteTodoItem={deleteTodoItemHandler} toggleTodoHandler={toggleTodoHandler} />
+      <TodoActions />
+      <TodoList
+        todoList={todoList}
+        deleteTodoItem={deleteTodoItemHandler}
+        toggleTodoHandler={toggleTodoHandler}
+      />
     </div>
   );
 }
