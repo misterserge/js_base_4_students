@@ -18,3 +18,9 @@ function pow(x, y) {
     return x * pow(x, y - 1);
 }
 Math.pow(5, 3);
+
+function countChars(string, index = 0) {
+    if (index === string.length) return 0;
+    return 1 + countChars(string, index + 1);
+}
+console.log(countChars('Hi!'));
