@@ -9,7 +9,7 @@ function process () {
 	updateProfile(person) ;
 	console.log(person) ;
 }
-// process();
+process();
 
 // function makeGroup () {
 // 	let people = [];
