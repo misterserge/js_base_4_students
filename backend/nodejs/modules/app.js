@@ -2,5 +2,6 @@
 import * as hello from './hello';
 
 import('./bye').then((module) => console.log(module));
-
+// welcome()
 hello.welcome();
+hello.hello();

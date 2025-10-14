@@ -1,3 +1,5 @@
+'use strict';
+
 function log(){
     setTimeout(() => {
         console.log(this)
@@ -17,7 +19,13 @@ const myObj = {x: 1, y:4}
 printThis = printThis.bind(myObj)
 printThis()
 
-const person = {name: 'Serge', pfor: 'web-dev', hi() {console.log("hello, my name is", this.name)}}
+const person = {
+    name: 'Serge', 
+    pfor: 'web-dev', 
+    hi() {
+        console.log("hello, my name is", this.name)
+    }
+}
 
 person.hi();
 
@@ -29,3 +37,20 @@ person2.hi();
 const numbers = [1,2,3]
 console.log(Math.max.apply(null, numbers))
 console.log(Math.max.call(null, ...numbers))
+
+
+const person2 = {
+	name: 'John',
+	age: 30,
+	greet() {
+		console.log("Hello, I'm " + this.name);
+	}
+}
+
+const jane = {
+	name: 'Jane',
+	age: 20
+}
+
+//   person2 = Object.create(jane);
+person2.greet.bind(jane)();

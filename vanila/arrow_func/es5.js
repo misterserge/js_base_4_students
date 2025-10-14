@@ -41,8 +41,11 @@ var person = {
     name: 'Jonh Doe',
     age: 44,
     languages: ['MHTL', 'CSS', 'Javascript'],
-    greet: function() {
-        console.log(this.name)
+    greet: function(_this) {
+        console.log(_this)
+        this.languages.forEach(function(lang) {
+            console.log(this.name, lang)
+        })
     }
 }
 

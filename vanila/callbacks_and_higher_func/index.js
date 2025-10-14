@@ -1,7 +1,7 @@
 //before
 const arr = [1, 2, 3, 4];
 
-function munSquared(num){
+function numSquared(num){
     return num * num;
 }
 
@@ -11,7 +11,7 @@ function divideOn2(num){
 
 function copyArrAndSquare(arr) {
     const output = [];
-    for(i = 0; i < arr.length; i ++) {
+    for(let i = 0; i < arr.length; i ++) {
         output.push( arr[i] ** 2 );
     }
     return output;
@@ -19,8 +19,8 @@ function copyArrAndSquare(arr) {
 
 function copyArrAndDivideOn2(arr) {
     const output = [];
-    for(i = 0; i < arr.length; i ++) {
-        output.push( arr[i] ** 2 );
+    for(let i = 0; i < arr.length; i ++) {
+        output.push( arr[i] / 2 );
     }
     return output;
 }
@@ -28,7 +28,7 @@ function copyArrAndDivideOn2(arr) {
 //after
 function copyArrAndDoSomething(arr, instructions) {
     const output = [];
-    for(i = 0; i < arr.length; i ++) {
+    for(let i = 0; i < arr.length; i ++) {
         output.push( instructions(arr[i]) );
     }
     return output;
@@ -38,5 +38,5 @@ function copyArrAndDoSomethingMap(arr, instructions) {
     return arr.map( (el) => instructions(el) );
 }
 
-copyArrAndDoSomething(arr, munSquared);
+copyArrAndDoSomething(arr, numSquared);
 copyArrAndDoSomething(arr, divideOn2);

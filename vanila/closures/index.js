@@ -16,7 +16,7 @@ function addByX() {
     } 
 }
 // const addByFive = addByX()
-// console.log(addByX(2));
+// console.log(addByFive(2));
 
 // const addByTwo = addByX()
 // console.log(addByTwo(2));
@@ -37,7 +37,7 @@ function once(fn) {
     }
 }
 
-const addByTwoOnce = once(num => num +2);
+const addByTwoOnce = once(num => num + 2);
 
 console.log(addByTwoOnce(2))
 console.log(addByTwoOnce(5))
