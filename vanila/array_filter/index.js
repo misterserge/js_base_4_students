@@ -33,9 +33,23 @@ const basket = [
 // const result = basket.filter((el) => (el.price>500));
 // const result = numbers.filter((el) => (el>4));
 const result = basket.reduce((acc, item) => {
+    // const result = basket.reduceRight((acc, item) => {
     if (item.quantity < 0) return acc;
     return acc + item.quantity * item.price
 }, 0)
 console.log(result);
 console.log(basket);
 // console.log(numbers);
+
+console.log(numbers.some((elem)=>{
+    return elem> 1;
+}));
+console.log(numbers.every((elem)=>{
+    return elem> 1;
+}));
+
+function setAlphabet() {
+    const arg = [...arguments]
+    console.log(arg.concat(['f', 'g', 'h']));
+}
+setAlphabet('a', 'b', 'c', 'd', 'e');

@@ -42,3 +42,9 @@ const addByTwoOnce = once(num => num + 2);
 console.log(addByTwoOnce(2))
 console.log(addByTwoOnce(5))
 console.log(addByTwoOnce(7))
+
+for (var i = 0; i < 3; i++) {
+    return function(x) {
+        return x;
+    }(i);
+}

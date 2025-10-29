@@ -13,6 +13,29 @@ console.log(person.toString())
 console.log(person.valueOf())
 console.log(person.hasOwnProperty('name'))
 console.log(person.__proto__)
+// person.greet.prototype.sound = function() {
+//   console.log("wow!!!");
+// }
+// console.log(person.sound());
+
+
+Object.prototype.sayHello = function() {
+  console.log("Hello, I'm " + this.name);
+}
+
+console.log(person.sayHello());
+
+function User(name) {
+  this.name = name;
+}
+
+User.prototype.sayHi = function() {
+  console.log(`Hi, I'm ${this.name}`);
+};
+
+const user = new User('Serge');
+
+user.sayHi();
 
 const person2 = new Object({
     name: "John",
@@ -31,7 +54,7 @@ console.log(person2.hasOwnProperty('name'))
 console.log(person2.__proto__)
 
 Object.prototype.greet2 = function() {
-console.log("Hello, I'm " + this.name);
+  console.log("Hello, I'm " + this.name + " and I'm " + this.age + " years old");
 }
 
 console.log(person2.greet2());
