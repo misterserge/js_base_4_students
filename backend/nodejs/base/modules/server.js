@@ -1,7 +1,7 @@
-var db = require("db");
+var db = require("./db");
 db.connect();
 const User = require("./user")
-var log = require("logger")(module);
+var log = require("./logger")(module);
 
 function run() {
     var vasya = new User("Vasya");

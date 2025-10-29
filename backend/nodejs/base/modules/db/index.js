@@ -1,6 +1,6 @@
 var phrases;
 exports.connect = function() {
-    phrases = require("db/ru");
+    phrases = require("./ru");
 };
 
 exports.getPhrase = function(name) {

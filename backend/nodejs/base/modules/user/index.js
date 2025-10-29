@@ -1,6 +1,6 @@
-var db = require("db");
+var db = require("../db/index");
 // db.connect();
-var log = require("logger")(module);
+var log = require("../logger")(module);
 
 function User(name) {
     this.name = name;
