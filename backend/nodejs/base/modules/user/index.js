@@ -1,4 +1,4 @@
-var db = require("../db/index");
+var db = require("../db");
 // db.connect();
 var log = require("../logger")(module);
 
@@ -13,6 +13,9 @@ User.prototype.hello = function(who) {
 console.log("user.js is required!");
 
 // global.User = User;
+// module.exports.User = User;
+// exports.User = User;
+// this.User = User;
 module.exports = User;
 
 // console.log(module)
