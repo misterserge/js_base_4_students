@@ -1,3 +1,4 @@
+//use supervisor supervisor.js to restart the server when the file changes
 var http = require('http');
 var url = require('url');
 

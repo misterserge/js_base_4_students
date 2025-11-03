@@ -3,11 +3,12 @@ var url = require('url');
 
 var server = new http.Server(function(req, res) {
     console.log(req.method, req.url);
+    // console.log(req.headers)
     // res.writeHead(200, {'Content-Type': 'text/plain'});
     var urlParsed = url.parse(req.url, true);
     console.log(urlParsed);
     if (urlParsed.pathname == '/echo' && urlParsed.query.message) {
-        // res.setHeader(200, 'OK', {'Cache-control': 'no-cache'});
+        // res.setHeader(200, 'OK', {'Cache-control': 'no-cache'}); //removeHeader
         // res.setHeader(200, {'Content-Type': 'text/plain'});
         res.writeHead(200, 'OK', {
             'Cache-Control': 'no-cache',
