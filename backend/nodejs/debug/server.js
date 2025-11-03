@@ -6,6 +6,7 @@ var server = http.createServer();
 server.on('request', function(req, res) {
     var urlParsed = url.parse(req.url, true);
     
+    debugger;
     if (req.method == 'GET' && urlParsed.pathname == '/echo' && urlParsed.query.message) {
         res.end(urlParsed.query.message);
         return;
@@ -16,3 +17,5 @@ server.on('request', function(req, res) {
 
 server.listen(3000);
 console.log('Server is running on port 3000');
+
+//node-inspect server.js
