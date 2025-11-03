@@ -10,3 +10,6 @@ server.on('request', require('./request'))
 
 server.listen(8080);
 //debug('Server running at http://127.0.0.1:8080/');
+
+//DEBUG=server:* node server-debug.js
+//DEBUG=server:request node server-debug.js
