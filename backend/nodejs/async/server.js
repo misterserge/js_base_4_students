@@ -4,6 +4,7 @@ var fs = require('fs');
 http.createServer(function (req, res) {
     var info;
     if (req.url === '/') {
+        // info = fs.readFileSync('index.html')
         info = fs.readFile('index.html', function (err, info) {
             if (err) {
                 console.error(err);
