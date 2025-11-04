@@ -15,7 +15,7 @@ setTimeout(function() {
 
 let timer = setInterval(function() {
     console.log(process.memoryUsage());
-});
+}, 1000);
 
 timer.unref();
 timer.ref();
