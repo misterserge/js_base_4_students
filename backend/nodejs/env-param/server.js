@@ -1,6 +1,6 @@
 var http = require('http');
 
-// console.log('PORT: ' + process.argv);
+console.log('PORT: ' + process.argv);
 
 http.createServer(function (req, res) {
     console.log(process.env.NODE_ENV)

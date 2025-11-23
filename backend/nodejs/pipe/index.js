@@ -29,12 +29,18 @@ function sendFile(file, res){
     res.end('Server error');
     console.error(err);
   });
-  file.on('open', function(){     
-    console.log('open');
-  });
-  file.on('close', function(){   
-    console.log('close');
-  });
+
+  file
+    .on('open', function(){     
+      console.log('open');
+    })
+    .on('close', function(){   
+      console.log('close');
+    })
+    .on('end', function(){
+      console.log('end');
+    });
+    
   res.on('close', function(){    
     file.destroy();
   });

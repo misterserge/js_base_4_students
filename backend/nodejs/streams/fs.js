@@ -1,10 +1,11 @@
+// sync readfile with fs stream
 var fs = require('fs');
 
 var stream = fs.ReadStream(__filename, {encoding: 'utf-8'});
 
 stream.on('readable', function() {
   var data = stream.read();
-  console.log(data);
+  console.log(data.length);
 });
 
 stream.on('end', function() {

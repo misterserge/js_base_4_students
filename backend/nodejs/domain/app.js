@@ -1,3 +1,4 @@
+//cover server.js with domain for handling errors
 var domain = require('domain');
 var serverDomain = domain.create();
 
